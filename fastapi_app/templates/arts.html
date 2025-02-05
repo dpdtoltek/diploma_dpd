@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block pagename %}
+<h1>
+    Магазин
+</h1>
+{% endblock %}
+{% block content %}
+    <hr>
+    {% for art in arts %}
+        <ul>
+            <li>
+                {{ art.title }} | {{ art.description }} | {{ art.cost }}
+                <button>Купить</button>
+            </li>
+        </ul>
+    {% endfor %}
+    <hr>
+{% endblock %}

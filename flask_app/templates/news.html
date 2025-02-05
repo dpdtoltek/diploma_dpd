@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <hr>
+    {% for news in news_all %}
+        <h2>{{ news.title }}</h2>
+        <br>
+        {{ news.content }}
+        <br>
+        <small style="float: right; margin-right: 20px;">{{ news.date }}</small>
+    <hr>
+    {% endfor %}
+    <hr>
+{% endblock %}

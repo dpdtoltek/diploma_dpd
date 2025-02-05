@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Art-shop{% endblock %}</title>
+</head>
+<body>
+    <header>
+        {% block pagename %}
+        <h1>
+            {{ header }}
+        </h1>
+        {% endblock %}
+    </header>
+
+    <nav>
+        {% block menu %}
+        <h2>
+            <a href="/index">Главная</a>
+            <p>
+                <a href="/arts">Магазин</a>
+            </p>
+            <p>
+                <a href="/cart">Корзина</a>
+            </p>
+            <p>
+                <a href="/news">Новости</a>
+            </p>
+        </h2>
+        {% endblock %}
+    </nav>
+
+    <main>
+        {% block content%}
+            <ul>
+                <li>{{ content }}</li>
+            </ul>
+        {% endblock %}
+    </main>
+</body>
+</html>

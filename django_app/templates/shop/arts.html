@@ -1,0 +1,20 @@
+{% extends 'menu.html' %}
+{% block title %}{{ block.super }}{% endblock %}
+{% block header %}
+    {{ block.super }}
+{% endblock %}
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+{% block content %}
+    <hr>
+    {% for art in arts_all %}
+        <ul>
+            <li>
+                {{ art.title }} | {{ art.description }} | {{ art.cost }}
+                <button>Купить</button>
+            </li>
+        </ul>
+    {% endfor %}
+    <hr>
+{% endblock %}
